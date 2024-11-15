@@ -120,46 +120,32 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Получаем элементы
             const burger = document.querySelector('.header__burger');
             const nav = document.querySelector('.header__nav');
             const overlay = document.querySelector('.overlay');
 
-            // Проверим, что элементы существуют
             if (!burger || !nav || !overlay) {
                 console.error('Не найдены элементы для бургера, меню или оверлея');
                 return;
             }
 
-            // Обработчик клика по кнопке бургера
             burger.addEventListener('click', function () {
-                console.log("Burger clicked");
-
-                // Добавляем/удаляем класс active
                 nav.classList.toggle('active');
                 overlay.classList.toggle('active');
 
-                // Проверяем, добавился ли класс active
-                console.log('Nav active:', nav.classList.contains('active'));
-                console.log('Overlay active:', overlay.classList.contains('active'));
-
-                // Запрет прокрутки
                 if (nav.classList.contains('active')) {
                     document.body.style.overflow = 'hidden';
                 } else {
-                    document.body.style.overflow = ''; // Возвращаем стандартный стиль
+                    document.body.style.overflow = '';
                 }
             });
 
-            // Закрытие меню при клике на overlay
             overlay.addEventListener('click', function () {
                 console.log("Overlay clicked");
 
-                // Убираем класс active
                 nav.classList.remove('active');
                 overlay.classList.remove('active');
 
-                // Разрешение прокрутки
                 document.body.style.overflow = '';
             });
         });
