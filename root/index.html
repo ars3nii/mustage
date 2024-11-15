@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mustage</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body style="background-color:black">
@@ -125,38 +125,25 @@
             const overlay = document.querySelector('.overlay');
 
             if (!burger || !nav || !overlay) {
-                console.error('Не найдены элементы для бургера, меню или оверлея');
+                console.error('Не знайдени елементи');
                 return;
             }
 
             burger.addEventListener('click', function () {
-                console.log("Burger clicked");
 
-                // Добавляем/удаляем класс active
                 nav.classList.toggle('active');
                 overlay.classList.toggle('active');
 
-                // Проверяем, добавился ли класс active
-                console.log('Nav active:', nav.classList.contains('active'));
-                console.log('Overlay active:', overlay.classList.contains('active'));
-
-                // Запрет прокрутки
                 if (nav.classList.contains('active')) {
                     document.body.style.overflow = 'hidden';
                 } else {
-                    document.body.style.overflow = ''; // Возвращаем стандартный стиль
+                    document.body.style.overflow = '';
                 }
             });
 
-            // Закрытие меню при клике на overlay
             overlay.addEventListener('click', function () {
-                console.log("Overlay clicked");
-
-                // Убираем класс active
                 nav.classList.remove('active');
                 overlay.classList.remove('active');
-
-                // Разрешение прокрутки
                 document.body.style.overflow = '';
             });
         });
