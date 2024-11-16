@@ -32,11 +32,11 @@ html, body {
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Задержка для visibility */
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
     z-index: 5;
 }
 
-/* Навигация */
+/* Навігація */
 .header__nav {
     top: 0;
     display: flex;
@@ -44,21 +44,18 @@ html, body {
     z-index: 10;
 }
 
-/* Для активного состояния меню */
 .header__nav.active {
-    right: 0; /* Показываем меню */
+    right: 0;
 }
 
-/* Для оверлея при активном состоянии */
 .overlay.active {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease;
 }
 
-/* Для кнопки бургера на мобильных устройствах */
 .header__burger {
-    display: none; /* Скрыто по умолчанию */
+    display: none;
     width: 50px;
     height: 30px;
     position: relative;
@@ -87,8 +84,6 @@ html, body {
     bottom: -22px;
 }
 
-
-/* Затемнение экрана */
 .overlay {
     position: fixed;
     top: 0;
@@ -200,7 +195,7 @@ html, body {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 200px);
-    overflow: hidden; /* Чтобы картинка не выходила за пределы экрана */
+    overflow: hiddenЖ
     color: #fff;
     text-align: center;
     width: 70%;
@@ -280,7 +275,6 @@ button.block__button::after {
     background-repeat: no-repeat;
 }
 
-
 .block__features {
     display: flex;
     align-items: center;
@@ -314,9 +308,9 @@ button.block__button::after {
 }
 
 .divider {
-    height: 100px; /* висота лінії */
-    width: 1px; /* ширина лінії */
-    background-color: #fff; /* напівпрозорий білий */
+    height: 100px;
+    width: 1px;
+    background-color: #fff;
 }
 
 /* Не зволікай */
@@ -439,16 +433,15 @@ button.block__button::after {
         display: block;
     }
 
-    /* На мобильных устройствах скрываем обычное меню */
     .header__nav {
         position: fixed;
         top: 0;
-        right: -100%; /* Скрыто за экраном справа */
+        right: -100%;
         width: 40vw;
         height: 100vh;
         background-color: #000;
         flex-direction: column;
-        padding-top: 60px; /* Отступ от верхней панели */
+        padding-top: 60px;
         transition: right 0.3s ease;
         z-index: 10;
     }
