@@ -333,6 +333,7 @@ button.block__button::after {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    color: #000;
 }
 
 
