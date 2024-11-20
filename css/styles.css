@@ -216,6 +216,7 @@ html, body {
     font-weight: 700;
     font-size: 64px;
     max-width: 15em;
+    color: #fff;
 }
 
 .main__subcontent {
@@ -234,6 +235,7 @@ html, body {
     max-width: 60%;
     text-align: left;
     letter-spacing: 0.05em;
+    color: #fff;
 }
 
 button.block__button {
